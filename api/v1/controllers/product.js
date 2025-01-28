@@ -37,7 +37,7 @@ module.exports={
     },
     UpdateById:(req,res)=>{
         try{
-        productModel.updateone({pid:req.params.id},req.body).then((data)=>{
+        productModel.updateOne({pid:req.params.id},req.body).then((data)=>{
             return res.status(200).json(data);
         });
         }
@@ -48,7 +48,7 @@ module.exports={
      },
      DeleteById:(req,res)=>{
         try{
-            productModel.deleteone({pid:req.params.id}).then((data)=>{
+            productModel.deleteOne({pid:req.params.id}).then((data)=>{
                 return res.status(200).json(data);
             });
             return res.status(200).json({Msg:"Add New Product",body:req.body});
